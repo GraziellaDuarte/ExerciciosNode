@@ -1,0 +1,317 @@
+  * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f3f5f9;
+  }
+  
+  .wrapper {
+      display: flex;
+      position: relative;
+  }
+  
+  .wrapper .sidebar {
+      position: fixed;
+      width: 200px;
+      height: 100%;
+      background: #17755b;
+      padding: 30px 0;
+  }
+  
+  .wrapper .sidebar h2 {
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: unset;
+  }
+  
+  .wrapper .sidebar ul li {
+      padding: 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .wrapper .sidebar ul li a {
+      color: #bdb8d7;
+      display: block;
+  }
+  
+  .wrapper .sidebar ul li a .fa {
+      width: 25px;
+  }
+  
+  .wrapper .sidebar ul li:hover {
+      background: #17755b;
+  }
+  
+  .wrapper .sidebar ul li:hover a {
+      color: #fff;
+  }
+  
+  .wrapper .sidebar .social-media {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+  }
+  
+  .wrapper .sidebar .social-media a {
+      display: block;
+      width: 40px;
+      background: #e0e4e8;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      margin: 0 5px;
+      color: #17755b;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+  }
+  
+  .wrapper .main-content {
+      width: 100%;
+      margin-left: 200px;
+  }
+  
+  .wrapper .main-content .header {
+      padding: 20px;
+      background: #fff;
+      color: #717171;
+      border-bottom: 1px solid #e0e4e8;
+  }
+  
+  .wrapper .main-content .info {
+      margin: 20px;
+      color: #717171;
+      line-height: 25px;
+  }
+  
+  .wrapper .main-content .info .div {
+      margin-bottom: 20px;
+  }
+  /* Accordion */
+  
+  .middle {
+      position: absolute;
+      top: 500%;
+      left: 30%;
+  }
+  
+  .menu {
+      width: 600px;
+      border-radius: 8px;
+      overflow: hidden;
+  }
+  
+  .item {
+      border-top: 1px solid rebeccapurple;
+      overflow: hidden;
+  }
+  
+  .btn {
+      display: block;
+      padding: 16px 20px;
+      background: #17755b;
+      color: white;
+      position: relative;
+  }
+  
+  .btn::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background: #17755b;
+      left: 20px;
+      bottom: -7px;
+      transform: rotate(45deg);
+  }
+  
+  .smenu {
+      background: #333;
+      overflow: hidden;
+      transition: max-height 0.3s;
+      max-height: 0;
+  }
+  
+  .smenu a {
+      display: block;
+      padding: 16px 26px;
+      color: white;
+      font-size: 14px;
+      margin: 4px 0;
+      position: relative;
+  }
+  
+  .smenu a::before {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 100px;
+      background: #17755b;
+      left: 0;
+      top: 0;
+      transition: 0.3s;
+      opacity: 0;
+  }
+  
+  .smenu a:hover::before {
+      opacity: 0;
+  }
+  
+  .item:target .smenu {
+      max-height: 10em;
+  }
+  /* Imc */
+  
+  form {
+      width: 350px;
+      height: 420px;
+      background: #1abc9c;
+      color: black;
+      box-sizing: border-box;
+      padding: 100px 50px;
+      border-radius: 10px;
+      position: absolute;
+      top: 80%;
+      left: 40%;
+  }
+  
+  button {
+      border: none;
+      outline: none;
+      height: 40px;
+      width: 80px;
+      background: #17755b;
+      color: black;
+      font-size: 15px;
+      border-radius: 5px;
+  }
+  /* Modo Noturno */
+  
+  label {
+      position: absolute;
+      top: 0;
+      right: 0;
+  }
+  
+  input[type="checkbox"] {
+      -webkit-appearance: none;
+      visibility: hidden;
+      display: none;
+  }
+  
+  .check {
+      position: relative;
+      display: block;
+      width: 40px;
+      height: 20px;
+      background: #092c2e;
+      cursor: pointer;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: ease-in 0.5s;
+  }
+  
+  input[type="checkbox"]:checked~.check {
+      background: #fff;
+      box-shadow: 0 0 0 1200px #092c2e;
+  }
+  
+  .check::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: #fff;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.5s;
+  }
+  
+  input[type="checkbox"]:checked~.check::before {
+      transform: translateX(-50px);
+  }
+  
+  .check::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      background: #092c2e;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transition: 0.5s;
+      transform: translateX(50px);
+  }
+  
+  input[type="checkbox"]:checked~.check::after {
+      transform: translateX(0px);
+  }
+  /* Retangulo */
+  
+  .rectangle {
+      background: #17755b;
+      border-radius: 30px;
+      width: 600px;
+      height: 200px;
+      margin: 0 auto;
+      text-align: center;
+  }
+  /*   
+  .square {
+      background: rgb(189, 178, 178);
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      border-radius: 30px;
+      text-align: center;
+      display: flex;
+      justify-content: flex-start;
+      ;
+  } */
+  
+  .square {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      position: relative;
+      background: red;
+      margin: 0 auto;
+  }
+  
+  .square::after {
+      content: "";
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 300px;
+      background: blue;
+  }
+  
+  .square::before {
+      content: "";
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      right: -150px;
+      background: green;
+  }
+  
+  .letreiro {
+      margin: 0 auto;
+      text-align: center;
+  }
