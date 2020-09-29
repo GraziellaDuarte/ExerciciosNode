@@ -5,7 +5,16 @@ const app = express()
 app.get("/", function(req, res) {
     res.sendfile(__dirname + "/html/index.html")
 })
+app.use(express.static(__dirname + '/'));
+pp.use(express.static(__dirname + '/login'));
 
+app.get("/login", function(req, res) {
+    res.sendfile(__dirname + "/html/login.html")
+})
+
+app.get("/servicos", function(req, res) {
+    res.sendfile(__dirname + "/html/servicos.html")
+})
 app.get("/login", function(req, res) {
     res.sendfile(__dirname + "/html/login.html")
 })
