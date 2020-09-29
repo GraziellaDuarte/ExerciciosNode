@@ -6,8 +6,8 @@ app.get("/", function(req, res) {
     res.sendfile(__dirname + "/html/index.html")
 })
 
-app.get("/sobre", function(req, res) {
-    res.send("Minha pagina Sobre")
+app.get("/login", function(req, res) {
+    res.sendfile(__dirname + "/html/login.html")
 })
 app.get("/blog", function(req, res) {
     res.send("Bem vindo ao meu Blog")
