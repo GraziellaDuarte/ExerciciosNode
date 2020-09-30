@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Caderneta Digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style" rel="stylesheet" type="text/css">
+    <link href="../Css/style.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="shortcut icon" type="image/png" href="../Img/siringa.png">
@@ -36,41 +36,30 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <h1>Serviços</h1>
-
-
-        <div class="middle">
-            <div class="menu">
-                <li class="item" id="hospital">
-                    <a href="#hospital" class="btn">Hospital</a>
-                    <div class="smenu">
-                        <a href="">Memorial</a>
-                        <a href="">Memorial</a>
-                    </div>
-                </li>
-
-
-                <li class="item" id="postos">
-                    <a href="#postos" class="btn">Postos</a>
-                    <div class="smenu">
-                        <a href="">Memorial</a>
-                        <a href="">Memorial</a>
-                    </div>
-                </li>
-
-
-                <li class="item" id="maternidade">
-                    <a href="#maternidade" class="btn">Maternidade</a>
-                    <div class="smenu">
-                        <a href="">Memorial</a>
-                        <a href="">Memorial</a>
-                    </div>
-                </li>
-
-
+        <div class="main-content">
+            <div class="header">Minha Saude</div>
+            <div class="info">
+                <div> Kido Endo Goenji Kazemaru Hiroto </div>
             </div>
+            <label>
+              <input type="checkbox">
+              <span class="check"></span>
+              <h4>Modo Noturno</h4>
+            </label>
 
-        </div>
+
+
+            <form>
+                <p>Informe seu nome</p>
+                <input type="text" class="nome" name="" placeholder="Nome">
+                <p>Informe sua altura</p>
+                <input type="text" class="altura" name="" placeholder="altura">
+                <p>Informe seu peso</p>
+                <input type="text" class="peso" name="peso" placeholder="peso">
+                <br><button onclick="clicar()">Calcular</button>
+                <p class="imc"></p>
+            </form>
+
 </body>
 
 </html>
