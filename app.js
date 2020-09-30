@@ -5,8 +5,7 @@ const app = express()
 app.get("/", function(req, res) {
     res.sendfile(__dirname + "/html/index.html")
 })
-app.use(express.static(__dirname + '/'));
-pp.use(express.static(__dirname + '/login'));
+
 
 app.get("/login", function(req, res) {
     res.sendfile(__dirname + "/html/login.html")
@@ -18,6 +17,11 @@ app.get("/servicos", function(req, res) {
 app.get("/login", function(req, res) {
     res.sendfile(__dirname + "/html/login.html")
 })
+app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/minhasaude'));
+app.use(express.static(__dirname + '/cartao'));
+app.use(express.static(__dirname + '/servicos'));
+app.use(express.static(__dirname + '/login'));
 app.get("/blog", function(req, res) {
     res.send("Bem vindo ao meu Blog")
 })
